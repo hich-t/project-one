@@ -1,38 +1,230 @@
-.App {
+@font-face {
+  font-family: "Akira";
+  src: local("Akira Expanded Demo.org"), url("./fonts/Akira Expanded Demo.otf") format("opentype");
+}
+
+@font-face{
+  font-family:  "Nalieta";
+  src: local("Nalieta_dafont.otf"), url("./fonts/Nalieta_dafont.otf") format("opentype")
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* navbar */
+
+
+.navbar{
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  overflow: hidden;
+}
+
+.navbarLeftSide{
+padding: 10px;
+display: flex;
+align-items: center;
+align-content: center;
+}
+
+.navbarRightSide{
+  position: fixed;
+  right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.exploreLogo{
+  width: 55px;
+  padding: 0 40px;
+}
+
+.navbarButton{
+
+margin: 0 40px;
+padding: 0 15px;
+color: rgb(170, 2, 2);
+font-family: "Nalieta";
+font-weight: bold;
+font-size: 35px;
+cursor: pointer;
+height: 80px;
+line-height: 80px;
+}
+
+.navbarButton:hover{
+  color: white;
+  background-color: #aa0202;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0) inset;
+}
+
+
+/* dropdown menus */
+
+.citiesDropdownMenu{
+  background-color:#aa0202 ;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0) inset;
+  position: fixed;
+  top: 80px;
+  left: 185px;
+  width: 100px;
+  z-index: 2;
+}
+
+.citiesDropDownMenu-city{
+  color: white;
+  font-family: "Nalieta";
+  font-size: 25px;
+  font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.citiesDropdownMenu-separator{
+  width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.yourTripDropdownMenu{
+  background-color:#aa0202 ;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0) inset;
+  position: fixed;
+  top: 80px;
+  left: 350px;
+  width: 200px;
+  z-index: 2;
+}
+
+.yourTripDropdownMenu-titles{
+  color: white;
+  font-family: "Nalieta";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* homepage */
+
+.homepage{
+  height: 100vh
+}
+
+.homepageBgVideo{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.homepageTitle{
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
+
+}
+
+.discoveJapan{
+color: white;
+font-family: "Akira";
+font-size: 90px;
+}
+
+.underBrandNewLight{
+color:white;
+font-family: "Nalieta";
+font-size: 55px;
+
+}
+
+.downArrowDiv{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  margin: 0 auto;
+}
+
+.downArrow{
+ width: 50px;
+ animation: blink 1s ease-in-out infinite;
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* people page */
+
+.peoplePage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.peoplePagetitle{
+height: 10%;
+}
+
+.peoplePage-content{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.peoplePage-content-left{
+  width: 65%;
+  height: 100%;
+  max-height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.peoplePage-content-right{
+  
+  width: 35%;
+  height: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.peoplePage-content-right-img{
+max-height: 33%;  
+max-width: 320px;
 }
