@@ -32,7 +32,19 @@ body,
   align-items: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   overflow: hidden;
+  z-index: 10;
+  transition: opacity 3.5s ease-in-out;
+
 }
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
 
 .navbarLeftSide{
 padding: 10px;
@@ -191,40 +203,53 @@ font-size: 55px;
   height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 .peoplePagetitle{
-height: 10%;
+  height: 10%;
+  font-family: "Nalieta"; 
+  font-size: 80px;
+  color: #aa0202;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .peoplePage-content{
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  height: 100vh;
-  max-height: 100vh;
+  align-items: stretch;
 }
 
 .peoplePage-content-left{
-  width: 65%;
-  height: 100%;
-  max-height: 100%;
+  width: 70%;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .peoplePage-content-right{
-  
-  width: 35%;
   height: 100%;
-  max-height: 100%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  
 }
 
 .peoplePage-content-right-img{
-max-height: 33%;  
-max-width: 320px;
+width: 320px;
+height:33.33333333%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.peoplePage-content-left-paragraph{
+  height: 90%;
+  width: 80%;
+  font-size: 18px;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
 }

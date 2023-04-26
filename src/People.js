@@ -1,3 +1,7 @@
+import youngGuy from './Assets/Images/young_jap_guy.jpeg'
+import kimonoWoman from "./Assets/Images/Woman-in-Kimono.jpg"
+import youngGirls from "./Assets/Images/young_jap_girls.webp"
+
 
 const People = () =>  {
 
@@ -29,9 +33,9 @@ const People = () =>  {
     </div>
     
     <div className="peoplePage-content-right">
-    <img className="peoplePage-content-right-img" src="https://as1.ftcdn.net/v2/jpg/05/45/96/12/1000_F_545961226_wAVwKaV4ddfAhoV3nIxm6yjq1CAYsFRm.jpg" alt="Japanese delivery man" />
-    <img className="peoplePage-content-right-img" src="https://www.traveller.com.au/content/dam/images/g/s/v/k/a/d/image.related.articleLeadwide.620x349.gv1oyp.png/1492481543203.jpg" alt="japanese women in traditional attire" />
-    <img className="peoplePage-content-right-img" src="https://media.npr.org/assets/img/2021/08/02/group-0fffb01aa57d8b561727f634b650686ac9bb3e9f-s600-c85.webp" alt="group of japanese young women" />
+        <img className="peoplePage-content-right-img" src={youngGuy} alt="Japanese delivery man" />
+        <img className="peoplePage-content-right-img" src={kimonoWoman} alt="japanese women in traditional attire" />
+        <img className="peoplePage-content-right-img" src={youngGirls} alt="group of japanese young women" />
     </div>
 
     </div>
