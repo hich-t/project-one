@@ -4,31 +4,46 @@ import './App.css';
 import Homepage from "./Homepage";
 import Navbar from "./Navbar";
 import People from "./People";
+import Culture from "./Culture";
+import Food from "./Food";
 
 const App = () => {
   const homepageRef = useRef(null);
   const peopleRef = useRef(null);
+  const cultureRef = useRef(null);
+  const foodRef = useRef(null);
   const [currentSection, setCurrentSection] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  const sectionRefs = [homepageRef, peopleRef];
+  const sectionRefs = [homepageRef, peopleRef, cultureRef, foodRef];
 
   useEffect(() => {
     const handleWheel = (e) => {
       e.preventDefault();
       const deltaY = e.deltaY;
 
-      if (deltaY > 0 && currentSection < sectionRefs.length - 1) {
-        setCurrentSection((prevSection) => {
-          const nextSection = prevSection + 1;
-          sectionRefs[nextSection].current.scrollIntoView({ behavior: 'smooth' });
-          return nextSection;
-        });
-      } else if (deltaY < 0 && currentSection > 0) {
-        setCurrentSection((prevSection) => {
-          const prevSectionIndex = prevSection - 1;
-          sectionRefs[prevSectionIndex].current.scrollIntoView({ behavior: 'smooth' });
-          return prevSectionIndex;
-        });
+      if (!isScrolling) {
+        setIsScrolling(true);
+
+        if (deltaY > 0 && currentSection < sectionRefs.length - 1) {
+          const nextRect = sectionRefs[currentSection + 1].current.getBoundingClientRect();
+          window.scrollTo({
+            top: window.pageYOffset + nextRect.top,
+            behavior: 'smooth'
+          });
+          setCurrentSection(currentSection + 1);
+        } else if (deltaY < 0 && currentSection > 0) {
+          const prevRect = sectionRefs[currentSection - 1].current.getBoundingClientRect();
+          window.scrollTo({
+            top: window.pageYOffset + prevRect.top,
+            behavior: 'smooth'
+          });
+          setCurrentSection(currentSection - 1);
+        }
+
+        setTimeout(() => {
+          setIsScrolling(false);
+        }, 1000);
       }
     };
 
@@ -37,7 +52,7 @@ const App = () => {
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, [currentSection, sectionRefs]);
+  }, [currentSection, sectionRefs, isScrolling]);
 
   return (
     <div className="App">
@@ -50,6 +65,15 @@ const App = () => {
       <div ref={peopleRef}>
         <People />
       </div>
+
+      <div ref={cultureRef}>
+        <Culture />
+      </div>
+
+      <div ref={foodRef}>
+        <Food />
+      </div>
+
     </div>
   );
 };

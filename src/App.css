@@ -241,6 +241,7 @@ font-size: 55px;
 
 .peoplePage-content-right-img{
 width: 320px;
+object-fit: cover;
 height:33.33333333%;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -252,4 +253,121 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
   text-align: justify;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
+}
+/* culture page */
+
+.culturePage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.culturePage-title{
+  height: 10%;
+  font-family: "Nalieta"; 
+  font-size: 80px;
+  color: #aa0202;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.culturePage-content{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.culturePage-content-left{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.culturePage-content-right{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.culturePage-content-right-paragraph{
+  height: 90%;
+  width: 80%;
+  font-size: 18px;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.culturePage-content-left-img{
+width: 320px;
+object-fit: cover;
+height:33.33333333%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* Food page */
+
+.foodPage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.foodPage-title{
+  height: 10%;
+  font-family: "Nalieta"; 
+  font-size: 80px;
+  color: #aa0202;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.foodPage-content-left-paragraph{
+  height: 90%;
+  width: 80%;
+  font-size: 16.5px;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.foodPage-content{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.foodPage-content-left{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.foodPage-content-right{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.foodPage-content-right-img{
+width: 320px;
+object-fit: cover;
+height:33.33333333%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
