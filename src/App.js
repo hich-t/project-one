@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
-import Homepage from "./Homepage";
-import Navbar from "./Navbar";
-import People from "./People";
-import Culture from "./Culture";
-import Food from "./Food";
+import Homepage from "./HomeComponents/Homepage";
+import Navbar from "./HomeComponents/Navbar";
+import People from "./HomeComponents/People";
+import Culture from "./HomeComponents/Culture";
+import Food from "./HomeComponents/Food";
 
 const App = () => {
   const homepageRef = useRef(null);

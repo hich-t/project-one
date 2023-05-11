@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "Akira";
+    src: local("Akira Expanded Demo.org"), url("../fonts/Akira Expanded Demo.otf") format("opentype");
+  }
+  
+  @font-face{
+    font-family:  "Nalieta";
+    src: local("Nalieta_dafont.otf"), url("../fonts/Nalieta_dafont.otf") format("opentype")
+  }
+
+  .Tokyo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* TokyoIntro */
+
+  .tokyoIntroPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .tokyoIntroPage-content{
+    display: flex;
+    justify-content: space-between;
+    height: 100%
+  }
+
+  .tokyoIntroPage-content-left{
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .tokyoIntroPage-content-right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .tokyoIntroPage-content-right-img{
+    width: 320px;
+    object-fit: cover;
+    height:33.33333333%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+.tokyoIntroPage-title{    
+    height: 10%;
+    font-family: "Nalieta"; 
+    font-size: 80px;
+    color: #aa0202;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+   
+    @media screen and (max-width: 1800px) {
+      height: 5%
+  
+    }
+}
+
+  .tokyoIntroPage-paragraph{
+        height: 90%;
+        width: 80%;
+        font-size: 18px;
+        text-align: justify;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        @media screen and (max-width: 1800px) {
+          font-size: 15px;     height: 95%   
+        }
+          
+        }
+
+  
+  
+
+    /* Homepage Tokyo */
+
+    .homepageTokyo{
+      height: 100vh
+    }
+
+    .homepageTokyoBgVideo{
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      object-fit:cover;
+      background-size: cover;
+    }
+
+    .homepageTokyoTitle{
+      position: absolute;
+      bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 40px;
+    }
+
+    .homepageTokyoTitleMain{
+      color: white;
+      font-family: "Akira";
+      font-size: 90px;
+    }
+
+    .homepageTokyoTitleBis{
+      color:white;
+      font-family: "Nalieta";
+      font-size: 55px;
+    }
+
+
+    .downArrowDiv{
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      margin: 0 auto;
+    }
+
+
+    .downArrow{
+      width: 50px;
+      animation: blink 1s ease-in-out infinite;
+    }
+
+    /* TokyoMap */
+
+    .TokyoMap{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+.tokyoMap-Title{  
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+
+
+    .tokyoMap-MainTitle{
+      font-family: "Nalieta"; 
+      font-size: 80px;
+      color: #aa0202;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+     
+      @media screen and (max-width: 1800px) {
+        height: 5%
+    
+      }
+      .tokyoMap-QuickIntro{
+        font-size: 15px;
+        text-align: justify;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        @media screen and (max-width: 1800px) {
+          font-size: 13px;     height: 95%   
+        }
+        }
+
+  }
+}
+
+.tokyoMap-MainMap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+
+
+  .tokyoMap-MainMap-img{
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    width: 60%;
+    border-radius: 10px;
+  }
+}
